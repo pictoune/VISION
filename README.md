@@ -50,4 +50,7 @@ This section contains code and instructions related to the Seeds algorithm.
 ## Slides of an Oral Presentation
 - [Presentation Slides](presentation_slides.pdf)
 
+## License
+This project is open source and available under the [MIT License](LICENSE).
+
 Feel free to explore the projects and reach out if you have any questions or suggestions.
