@@ -47,7 +47,7 @@ This section contains code and instructions related to the Seeds algorithm.
 - **Code**: [Seeds.cpp](TP_seeds/Seeds.cpp)
 - **Instructions**: [PDF](TP_seeds/instructions_TP_seeds.pdf)
 
-## Presentation Slides
+## Slides of an Oral Presentation
 - [Presentation Slides](presentation_slides.pdf)
 
 Feel free to explore the projects and reach out if you have any questions or suggestions.
