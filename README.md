@@ -47,6 +47,7 @@ This section contains C++ code and instructions related to the Seeds algorithm.
 - **Instructions**: [PDF](TP_seeds/instructions_TP_seeds.pdf)
 
 ## Slides of an Oral Presentation
+This presentation entitled "Particle Tracking with Multiple Event Cameras" I did with another student (Nils Aurdal) focused on using event-based cameras and the Kalman filter for 3D tracking of particles in a wind tunnel. It highlighted the advantages of event-based cameras, such as their high dynamic range and temporal resolution. The presentation also discussed various filtering methods for data processing and different techniques for reconstructing particle tracks in 3D space.
 - [Presentation Slides](presentation_slides.pdf)
 
 ## License
