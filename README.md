@@ -7,8 +7,8 @@ This repository contains practical works (PW) I completed, along with slides fro
 - [PW n°3: Fundamental Matrix](#pw-n3-fundamental-matrix)
 - [PW n°4: Object Tracking](#pw-n4-object-tracking)
 - [PW n°5: Optical Flow](#pw-n5-optical-flow)
-- [PW n°6: Panorama Stitching](#pw-n5-panorama-stitching)
-- [PW n°7: Seeds](#pw-n6-seeds)
+- [PW n°6: Panorama Stitching](#pw-n6-panorama-stitching)
+- [PW n°7: Seeds](#pw-n7-seeds)
 - [Slides of an Oral Presentation](#pw-n7-presentation-slides)
 
 ## PW n°1: GC Disparity
