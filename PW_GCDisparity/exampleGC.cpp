@@ -17,22 +17,24 @@ using namespace std;
 //     5\          /1
 //       \        /
 //          SINK
-void testGCuts() {
-    Graph<int,int,int> g(2, 1); // estimated # of nodes/edges
-    g.add_node(2); 
-    g.add_tweights( 0,   /* capacities */  1, 5 );
-    g.add_tweights( 1,   /* capacities */  6, 1 );
-    g.add_edge( 0, 1,    /* capacities */  4, 3 );
+void testGCuts()
+{
+    Graph<int, int, int> g(2, 1); // estimated # of nodes/edges
+    g.add_node(2);
+    g.add_tweights(0, /* capacities */ 1, 5);
+    g.add_tweights(1, /* capacities */ 6, 1);
+    g.add_edge(0, 1, /* capacities */ 4, 3);
     int flow = g.maxflow();
     cout << "Flow = " << flow << endl;
-    for (int i=0;i<2;i++)
-        if (g.what_segment(i) == Graph<int,int,int>::SOURCE)
+    for (int i = 0; i < 2; i++)
+        if (g.what_segment(i) == Graph<int, int, int>::SOURCE)
             cout << i << " is in the SOURCE set" << endl;
         else
             cout << i << " is in the SINK set" << endl;
 }
 
-int main() {
+int main()
+{
     testGCuts();
     return 0;
 }
