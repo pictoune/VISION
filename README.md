@@ -31,7 +31,7 @@ This section includes Python code and instructions for object tracking using Mea
 - **Code**: [Tracking_MeanShift.py](PW_object_tracking/code/Tracking_MeanShift.py)
 - **Instructions**: [PDF](PW_object_tracking/instructions_PW_tracking.pdf)
 
-## PW n°6: Optical Flow
+## PW n°5: Optical Flow
 This section contains Python code (Jupyter notebook) and instructions for computing the optical flow of images, and a report presenting the results.
 - **Instructions**: [PDF](https://github.com/pictoune/VISION/blob/main/PW_optical_flow/instructions_PW_optical_flow.pdf)
 - **Code**: [code](https://github.com/pictoune/VISION/tree/main/PW_optical_flow/code)
