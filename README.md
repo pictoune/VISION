@@ -2,14 +2,14 @@
 
 This repository contains practical works (PW) I completed, along with slides from a presentation I co-delivered with another student, as part of my master's course in computer vision (https://perso.ensta-paris.fr/~manzaner/Cours/IMA/VISION/).
 ## Table of Contents
-- [PW n°1: GC Disparity](#gc-disparity)
-- [PW n°2: Face Alignment](#face-alignment)
-- [PW n°3: Fundamental Matrix](#fundamental-matrix)
-- [PW n°4: Object Tracking](#object-tracking)
-- [PW n°5: Optical Flow](#optical-flow)
-- [PW n°6: Panorama Stitching](#panorama-stitching)
-- [PW n°7: Seeds](#seeds)
-- [Slides of an Oral Presentation](#presentation-slides)
+- [PW n°1: GC Disparity](#pw-n1-gc-disparity)
+- [PW n°2: Face Alignment](#pw-n2-face-alignment)
+- [PW n°3: Fundamental Matrix](#pw-n3-fundamental-matrix)
+- [PW n°4: Object Tracking](#pw-n4-object-tracking)
+- [PW n°5: Optical Flow](#pw-n5-optical-flow)
+- [PW n°6: Panorama Stitching](#pw-n5-panorama-stitching)
+- [PW n°7: Seeds](#pw-n6-seeds)
+- [Slides of an Oral Presentation](#pw-n7-presentation-slides)
 
 ## PW n°1: GC Disparity
 This section contains C++ code and instructions for computing disparity using Graph Cuts.
