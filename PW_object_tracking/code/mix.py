@@ -14,7 +14,7 @@ def process_video(path):
     """
     cap = cv2.VideoCapture(path)
 
-    # Check if the video capture object was successfully created
+    # check if the video capture object was successfully created
     if not cap.isOpened():
         print(f"Error: Could not open video file {path}.")
         return
@@ -54,27 +54,27 @@ def process_video(path):
         ori += 90
         discret = 360 / 20
 
-        # Create indices for the entire ROI
+        # create indices for the entire ROI
         roi_indices = np.indices(roi.shape)
         i_indices, j_indices = roi_indices[0], roi_indices[1]
 
-        # Offset indices to match the position in the original image
+        # offset indices to match the position in the original image
         i_indices += myROI.r
         j_indices += myROI.c
 
-        # Flatten the indices for vectorized operations
+        # flatten the indices for vectorized operations
         i_flat = i_indices.flatten()
         j_flat = j_indices.flatten()
 
-        # Apply the condition mod > 20
+        # apply the condition mod > 20
         condition = mod[i_flat, j_flat] > 20
 
-        # Filter indices and orientations based on the condition
+        # filter indices and orientations based on the condition
         filtered_i = i_flat[condition]
         filtered_j = j_flat[condition]
         filtered_ori = ori[filtered_i, filtered_j]
 
-        # Compute displacements and update Rtable
+        # compute displacements and update Rtable
         displacements = np.stack([filtered_i - center_y, filtered_j - center_x], axis=-1)
         for displacement, angle in zip(displacements, filtered_ori):
             Rtable[int(angle / discret)].append(tuple(displacement))
@@ -91,13 +91,13 @@ def process_video(path):
         mask = cv2.inRange(
             hsv_roi, np.array((0.0, 30.0, 20.0)), np.array((180.0, 255.0, 235.0))
         )
-        # Marginal histogram of the Hue component
+        # marginal histogram of the Hue component
         roi_hist = cv2.calcHist([hsv_roi], [0], mask, [180], [0, 180])
         
-        # Histogram values are normalised to [0,255]
+        # histogram values are normalised to [0,255]
         cv2.normalize(roi_hist, roi_hist, 0, 255, cv2.NORM_MINMAX)
 
-        # Setup the termination criteria: either 10 iterations,
+        # setup the termination criteria: either 10 iterations,
         # or move by less than 1 pixel
         term_crit = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 1)
 
@@ -128,7 +128,7 @@ def process_video(path):
 
             ret, track_window = cv2.meanShift(H, track_window, term_crit)
 
-            # Draw a blue rectangle on the current image
+            # draw a blue rectangle on the current image
             r, c, h, w = track_window
             frame_tracked = cv2.rectangle(frame, (r, c), (r + h, c + w), (255, 0, 0), 2)
             cv2.imshow("First image", frame_tracked)
