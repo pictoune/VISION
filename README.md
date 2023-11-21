@@ -28,7 +28,7 @@ This section contains C++ code and instructions for computing the fundamental ma
 
 ## PW n°4: Object Tracking
 This section includes Python code and instructions for object tracking using MeanShift.
-- **Code**: [Tracking_MeanShift.py](PW_object_tracking/code/Tracking_MeanShift.py)
+- **Code**: [code](PW_object_tracking/code)
 - **Instructions**: [PDF](PW_object_tracking/instructions_PW_tracking.pdf)
 
 ## PW n°5: Optical Flow
