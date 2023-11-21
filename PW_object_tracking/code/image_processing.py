@@ -17,6 +17,7 @@ def get_orientation_mask(orientation, magnitude, threshold=20):
     """
     mask = magnitude > threshold
     valid_orientation = np.where(mask, orientation, 0)
+    
     return valid_orientation
 
 
@@ -62,4 +63,5 @@ def calculate_histogram_hsv(roi, mask_range=((0., 30., 20.), (180., 255., 235.))
     mask = cv2.inRange(hsv_roi, np.array(mask_range[0]), np.array(mask_range[1]))
     roi_hist = cv2.calcHist([hsv_roi], [0], mask, [180], [0, 180])
     cv2.normalize(roi_hist, roi_hist, 0, 255, cv2.NORM_MINMAX)
+    
     return roi_hist
