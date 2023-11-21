@@ -14,7 +14,7 @@ def process_video(path):
     """
     cap = cv2.VideoCapture(path)
 
-    # Check if the video capture object was successfully created
+    # check if the video capture object was successfully created
     if not cap.isOpened():
         print(f"Error: Could not open video file {path}.")
         return
@@ -50,28 +50,28 @@ def process_video(path):
         ori += 90
         discret = 360 / 20
 
-        # Create indices for the entire ROI
+        # create indices for the entire ROI
         roi_indices = np.indices(roi.shape)
         i_indices, j_indices = roi_indices[0], roi_indices[1]
 
-        # Offset indices to match the position in the original image
+        # offset indices to match the position in the original image
         i_indices += myROI.r
         j_indices += myROI.c
 
-        # Flatten the indices for vectorized operations
+        # flatten the indices for vectorized operations
         i_flat = i_indices.flatten()
         j_flat = j_indices.flatten()
 
-        # Filter indices based on the condition
+        # filter indices based on the condition
         filtered_indices = mod[i_indices, j_indices] > 20
         i_filtered = i_flat[filtered_indices]
         j_filtered = j_flat[filtered_indices]
 
-        # Compute the orientation and the displacement
+        # compute the orientation and the displacement
         orientations = ori[i_filtered, j_filtered]
         displacements = np.stack([(i_filtered - center_y, j_filtered - center_x)], axis=-1)
 
-        # Map the filtered values to Rtable
+        # map the filtered values to Rtable
         for orient, disp in zip(orientations, displacements):
             Rtable[int(orient / discret)].append(tuple(disp))
 
