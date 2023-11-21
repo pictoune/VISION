@@ -51,6 +51,38 @@ This section contains C++ code and instructions related to the Seeds algorithm.
 This presentation, entitled 'Particle Tracking with Multiple Event Cameras', I did with another student (Nils Aurdal), focused on using event-based cameras and the Kalman filter for 3D tracking of particles in a wind tunnel. It highlighted the advantages of event-based cameras, such as their high dynamic range and temporal resolution. The presentation also discussed various filtering methods for data processing and different techniques for reconstructing particle tracks in 3D space.
 - [Presentation Slides](presentation_slides.pdf)
 
+## Usage 
+### Python projects (PW n°2, 4 & 5)
+#### Step 1: Clone the Repository
+Clone the VISION repository to your local machine using the following commands:
+```bash
+git clone https://github.com/pictoune/VISION.git
+cd VISION
+```
+#### Step 2: Create the required Conda Environment
+Set up the required environment using Conda:
+  ```bash
+  conda env create -f environment.yml -n VISION_env
+  ```
+#### Step 3: Running the code
+- If the practical work you are interested in is written in *.py* files, you must first activate the conda environment: 
+  ```bash
+  conda activate TADI_env
+  ```
+  then you can run it:
+  ```bash
+  python <script_name>.py
+  ```
+- Otherwise if it is written in a *jupyter notebook*, you need to initiate the notebook first:
+  ```bash
+    jupyter-notebook
+  ```
+  Once Jupyter Notebook is open, navigate to the notebook you want to run. Then, change the kernel to the VISION environment:
+  Go to `Kernel` -> `Change kernel` -> `Python [conda env:VISION_env]`.
+  Then you can run the cells.
+### C++ projects (PW n°1, 3, 6 & 7)
+To test the code of the practical work done in C++, you just need to make sure that the Imazgine++ library is installed (see https://imagine.enpc.fr/~monasse/Imagine++/).
+
 ## License
 This project is open source and available under the [MIT License](LICENSE).
 
