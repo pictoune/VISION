@@ -14,7 +14,7 @@ def process_video(path):
 	"""
 	cap = cv2.VideoCapture(path)
 
-	# Check if the video capture object was successfully created
+	# check if the video capture object was successfully created
 	if not cap.isOpened():
 		print(f"Error: Could not open video file {path}.")
 		return
@@ -59,13 +59,13 @@ def process_video(path):
 		# Pixels with S<30, V<20 or V>235 are ignored 
 		mask = cv2.inRange(hsv_roi, np.array((0.,30.,20.)), np.array((180.,255.,235.)))
 
-		# Marginal histogram of the Hue component
+		# marginal histogram of the Hue component
 		roi_hist = cv2.calcHist([hsv_roi],[0],mask,[180],[0,180])
 
-		# Histogram values are normalised to [0,255]
+		# histogram values are normalised to [0,255]
 		cv2.normalize(roi_hist,roi_hist,0,255,cv2.NORM_MINMAX)
 
-		# Setup the termination criteria: either 10 iterations,
+		# setup the termination criteria: either 10 iterations,
 		# or move by less than 1 pixel
 		term_crit = ( cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 1 )
 
@@ -74,14 +74,14 @@ def process_video(path):
 			ret ,frame = cap.read()
 			if ret == True:
 				hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-				# Backproject the model histogram roi_hist onto the 
+				# backproject the model histogram roi_hist onto the 
 				# current image hsv, i.e. dst(x,y) = roi_hist(hsv(0,x,y))
 				dst = cv2.calcBackProject([hsv],[0],roi_hist,[0,180],1)
 
 				# apply meanshift to dst to get the new location
 				ret, track_window = cv2.meanShift(dst, track_window, term_crit)
 
-				# Draw a blue rectangle on the current image
+				# draw a blue rectangle on the current image
 				r,c,h,w = track_window
 				frame_tracked = cv2.rectangle(frame, (r,c), (r+h,c+w), (255,0,0) ,2)
 				cv2.imshow('Sequence',frame_tracked)
