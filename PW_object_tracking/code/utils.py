@@ -77,8 +77,6 @@ def compute_grad(I):
     return mod, ori
 
 
-# In utils.py
-
 def process_roi(frame, myROI, clone):
     """
     Process the ROI by drawing it on the frame if defined, or resetting the frame otherwise.
@@ -100,4 +98,5 @@ def process_roi(frame, myROI, clone):
     else:
         # Reset the frame to the original
         processed_frame = clone.copy()
+        
     return processed_frame
