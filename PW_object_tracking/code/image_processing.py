@@ -63,5 +63,3 @@ def calculate_histogram_hsv(roi, mask_range=((0., 30., 20.), (180., 255., 235.))
     roi_hist = cv2.calcHist([hsv_roi], [0], mask, [180], [0, 180])
     cv2.normalize(roi_hist, roi_hist, 0, 255, cv2.NORM_MINMAX)
     return roi_hist
-
-# You can add more image processing functions here as needed
