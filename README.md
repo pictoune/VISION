@@ -9,7 +9,7 @@ This repository contains practical works (PW) I completed, along with slides fro
 - [PW n°5: Optical Flow](#pw-n5-optical-flow)
 - [PW n°6: Panorama Stitching](#pw-n6-panorama-stitching)
 - [PW n°7: Seeds](#pw-n7-seeds)
-- [Slides of an Oral Presentation](#pw-n7-presentation-slides)
+- [Oral Presentation](#oral-presentation)
 
 ## PW n°1: GC Disparity
 This section contains C++ code and instructions for computing disparity using Graph Cuts.
@@ -47,7 +47,7 @@ This section contains C++ code and instructions related to the Seeds algorithm.
 - **Code**: [Seeds.cpp](PW_seeds/Seeds.cpp)
 - **Instructions**: [PDF](PW_seeds/instructions_PW_seeds.pdf)
 
-## Slides of an Oral Presentation
+## Oral Presentation
 This presentation, entitled 'Particle Tracking with Multiple Event Cameras', I did with another student (Nils Aurdal), focused on using event-based cameras and the Kalman filter for 3D tracking of particles in a wind tunnel. It highlighted the advantages of event-based cameras, such as their high dynamic range and temporal resolution. The presentation also discussed various filtering methods for data processing and different techniques for reconstructing particle tracks in 3D space.
 - [Presentation Slides](presentation_slides.pdf)
 
