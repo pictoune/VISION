@@ -81,7 +81,7 @@ Set up the required environment using Conda:
   Go to `Kernel` -> `Change kernel` -> `Python [conda env:VISION_env]`.
   Then you can run the cells.
 ### C++ projects (PW n°1, 3, 6 & 7)
-To test the code of the practical work done in C++, you just need to make sure that the Imazgine++ library is installed (see https://imagine.enpc.fr/~monasse/Imagine++/).
+To test the code of the practical work done in C++, you just need to make sure that the Imagine++ library is installed (see https://imagine.enpc.fr/~monasse/Imagine++/).
 
 ## License
 This project is open source and available under the [MIT License](LICENSE).
