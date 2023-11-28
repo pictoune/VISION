@@ -17,7 +17,7 @@ This section contains C++ code and instructions for computing disparity using Gr
 - **Instructions**: [PDF](PW_GCDisparity/instructions_PW_GCDisparity.pdf)
 
 ## PW n°2: Face Alignment
-This section includes Python code (in a Jupyter Notebook) and instructions for face alignment.
+This section includes Python code (Jupyter Notebook) and instructions for face alignment.
 - **Code**: [PW_face_alignment.ipynb](PW_face_alignment/PW_face_alignment.ipynb)
 - **Instructions**: [PDF](PW_face_alignment/instructions_PW_face_alignment.pdf)
 
